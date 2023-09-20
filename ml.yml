@@ -1,0 +1,75 @@
+# -----------------------------------------------------------------------------
+# Anaconda Machine Learning Environment - based on Anaconda channel.
+# Author: Konstantin Dobratulin <zsxoff@gmail.com>
+#
+# For create this environment run: conda env create --file ml.yml
+# For update this environment run: conda env update --file ml.yml --prune
+# For remove this environment run: conda env remove --name ml
+#
+# -----------------------------------------------------------------------------
+#
+
+name: ml
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - anaconda::python=3.7.6
+  # ---------------------------------- Libs -----------------------------------
+  - anaconda::graphviz
+  - anaconda::imageio
+  - anaconda::matplotlib
+  - anaconda::numba
+  - anaconda::numpy
+  - anaconda::opencv
+  - anaconda::pandas
+  - anaconda::psutil
+  - anaconda::pyyaml
+  - anaconda::requests
+  - anaconda::scikit-image
+  - anaconda::scikit-learn
+  - anaconda::scipy
+  - anaconda::seaborn
+  - anaconda::statsmodels
+  - anaconda::sympy
+  - anaconda::tabulate
+  - anaconda::theano
+  - anaconda::tqdm
+  # --------------------------------- Tools -----------------------------------
+  - conda-forge::Cython
+  - conda-forge::ipython
+  - conda-forge::jupyter
+  - conda-forge::jupyterlab
+  - conda-forge::jupytext
+  - conda-forge::notebook
+  # --------------------------------- Tests -----------------------------------
+  - conda-forge::pytest
+  # --------------------------- ML Additional libs ----------------------------
+  - conda-forge::catboost
+  - conda-forge::hdbscan
+  - conda-forge::lightgbm
+  - conda-forge::xgboost
+  # ----------------------------- Deep Learning -------------------------------
+  - anaconda::keras
+  - anaconda::pytorch
+  - anaconda::tensorboard
+  - anaconda::tensorflow-gpu
+  - anaconda::torchvision
+  # ---------------------------- Text processing ------------------------------
+  - conda-forge::langdetect
+  - conda-forge::textdistance
+  # ------------------------- DICOM and medical images ------------------------
+  - conda-forge::nibabel
+  - conda-forge::pydicom
+  # ------------------------------- Formatters --------------------------------
+  - conda-forge::bandit
+  - conda-forge::black
+  - conda-forge::flake8
+  - conda-forge::isort
+  - conda-forge::pydocstyle
+  - conda-forge::pylint
+  # ---------------------------------- pip ------------------------------------
+  - pip
+  - pip:
+      - prospector
+      - pytype
